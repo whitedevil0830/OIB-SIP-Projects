@@ -20,22 +20,14 @@ elif ft == "Diesel":
 else:
     ft = 2
     
-if St == "Dealer":
-    St = 0
-else:
-    St = 1
-    
-if tran == "Manual":
-    tran = 0
-else:
-    tran = 1   
+St = 0 if St == "Dealer" else 1
+
+tran = 0 if tran == "Manual" else 1
 
 Selling_Price = pred(yr, pp, dkms, ft, St, tran, Owner)
 st.write("")
 st.write("")
 st.write("")
-# st.write("Selling Price (in Lakhs): ", Selling_Price)
 cont = st.container(border=True, )
 with cont:
     st.write("Selling Price (in Lakhs):", Selling_Price)
-    # st.write(Selling_Price)
